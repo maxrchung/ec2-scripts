@@ -12,7 +12,7 @@ done
 
 # https://www.pedroalonso.net/blog/hosting-postgresql-on-a-t4g-graviton2-arm-instance-on-aws-ec2/
 
-file_name=`date +%Y%m%d_%H%M%S`.pgdump
+file_name=`date +%Y%m%d_%H%M%S`.dump
 PGPASSWORD=$password pg_dump -U $username -d $database -f $file_name
 bzip2 $file_name
 
